@@ -1,0 +1,40 @@
+/* === LIGHT POS THEME RESPONSIVE & USER FRIENDLY === */
+[data-sidebarbg="skin6"] .left-sidebar {
+    background: linear-gradient(180deg, #ffffff 0%, #f4f7ff 100%) !important;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.08);
+    border-right: 1px solid #e2e6ea;
+    transition: all 0.3s ease;
+}
+
+[data-sidebarbg="skin6"] .sidebar-nav ul .sidebar-item {
+    position: relative;
+}
+
+[data-sidebarbg="skin6"] .sidebar-nav ul .sidebar-item .sidebar-link {
+    color: #1e293b !important;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin: 3px 0;
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+}
+
+/* Hover effect */
+[data-sidebarbg="skin6"] .sidebar-nav ul .sidebar-item .sidebar-link:hover {
+    background-color: #e9f1ff !important;
+    color: #0066ff !important;
+    font-weight: 600;
+}
+
+/* Icon color default */
+[data-sidebarbg="skin6"] .sidebar-nav i {
+    color: #0066ff !important;
+    transition: 0.3s;
+}
+
+/* Sidebar collapse fix: tooltip for icons only */
+[data-sidebarbg="skin6"].collapsed .sidebar-link .hide-menu {
+    display: none;
+}
