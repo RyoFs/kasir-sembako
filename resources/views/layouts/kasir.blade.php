@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Auth;
 
 <header class="kasir-header d-flex justify-content-between align-items-center px-4">
     <div class="d-flex align-items-center gap-2 text-white fs-5">
-        <i class="mdi mdi-cart"></i> POS KASIR
+        <img src="{{ asset('assets/images/icon.ico') }}" alt="Logo" class="logo-icon"> POS KASIR
     </div>
     <div class="d-flex align-items-center gap-3 text-white">
         <span><i class="mdi mdi-account"></i> {{ Auth::user()->nama }}</span>

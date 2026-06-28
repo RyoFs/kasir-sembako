@@ -56,7 +56,7 @@
                 <div class="navbar-header" data-logobg="skin5">
                     <a class="navbar-brand" href="{{ url('/') }}">                                            
                         <span class="logo-text">                          
-                            <i class="mdi mdi-check-underline-circle"></i> Aplikasi POS                             
+                            <img src="{{ asset('assets/images/icon.ico') }}" alt="Logo" class="logo-icon"> Aplikasi POS                             
                         </span>
                     </a>
                     <a class="nav-toggler waves-effect waves-light d-block d-md-none" href="javascript:void(0)"><i class="ti-menu ti-close"></i></a>
@@ -98,8 +98,7 @@
                     <ul id="sidebarnav">
                         <!-- User Profile-->
                         <li>
-                            <div class="user-profile d-flex no-block dropdown m-t-20">
-                                <div class="user-pic"><img src="" alt="users" class="rounded-circle" width="40"></div>
+                            <div class="user-profile d-flex no-block dropdown m-t-20"> 
                                 <div class="user-content hide-menu m-l-10">
                                     <a href="javascript:void(0)" class="" id="Userdd" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                         @if(Auth::check())
@@ -118,7 +117,7 @@
                         </li>
 
                         <!-- Home -->
-                        <li class="sidebar-item">
+                        <li class="sidebar-item mt-3">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/') }}">
                                 <i class="mdi mdi-home-outline"></i>
                                 <span class="hide-menu">Home</span>
@@ -126,7 +125,7 @@
                         </li>
 
                         <!-- Kasir -->
-                        <li class="sidebar-item">
+                        <li class="sidebar-item mt-3">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('kasir.index') }}">
                                 <i class="mdi mdi-cart-outline"></i>
                                 <span class="hide-menu">Kasir</span>
@@ -134,19 +133,19 @@
                         </li>
 
                         <!-- Product -->
-                        <li class="sidebar-item">
+                        <li class="sidebar-item mt-3">
                             <a class="sidebar-link has-arrow waves-effect waves-dark" data-bs-toggle="collapse" href="#productMenu">
                                 <i class="mdi mdi-package-variant-closed"></i>
                                 <span class="hide-menu">Product</span>
                             </a>
                             <ul id="productMenu" class="collapse first-level">
-                                <li class="sidebar-item">
+                                <li class="sidebar-item mt-3">
                                     <a href="{{ route('kategori.index') }}" class="sidebar-link">
                                         <i class="mdi mdi-shape-outline"></i>
                                         <span class="hide-menu">Kategori</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item">
+                                <li class="sidebar-item mt-3">
                                     <a href="{{ route('produk.index') }}" class="sidebar-link">
                                         <i class="mdi mdi-package-variant-closed"></i>
                                         <span class="hide-menu">Items</span>
@@ -156,7 +155,7 @@
                         </li>
 
                         <!-- Stock -->
-                        <li class="sidebar-item">
+                        <li class="sidebar-item mt-3">
                             <a class="sidebar-link has-arrow waves-effect waves-dark" data-bs-toggle="collapse" href="#transaksiMenu">
                                 <i class="mdi mdi-database-outline"></i>
                                 <span class="hide-menu">Stock</span>
@@ -172,7 +171,7 @@
                         </li>
 
                         <!-- Settlement -->
-                        <li class="sidebar-item">
+                        <li class="sidebar-item mt-3">
                             <a class="sidebar-link has-arrow waves-effect waves-dark" data-bs-toggle="collapse" href="#settlementMenu">
                                 <i class="mdi mdi-book-open-page-variant"></i>
                                 <span class="hide-menu">Settlement</span>
@@ -194,7 +193,7 @@
                         </li>
 
                         <!-- Laporan -->
-                        <li class="sidebar-item">
+                        <li class="sidebar-item mt-3">
                             <a class="sidebar-link has-arrow waves-effect waves-dark" data-bs-toggle="collapse" href="#laporanMenu">
                                 <i class="mdi mdi-chart-bar"></i>
                                 <span class="hide-menu">Laporan</span>
@@ -206,7 +205,7 @@
                                         <span class="hide-menu">Logs Penjualan</span>
                                     </a>
                                 </li>
-                                <li class="sidebar-item">
+                                <li class="sidebar-item mt-3">
                                     <a href="{{ route('laporan.summary') }}" class="sidebar-link">
                                         <i class="mdi mdi-chart-bar"></i>
                                         <span class="hide-menu">Summary Penjualan</span>
@@ -216,13 +215,13 @@
                         </li>
 
                         <!-- Pengaturan -->
-                        <li class="sidebar-item">
+                        <li class="sidebar-item mt-3">
                             <a class="sidebar-link has-arrow waves-effect waves-dark" data-bs-toggle="collapse" href="#pengaturanMenu">
                                 <i class="mdi mdi-cog-outline"></i>
                                 <span class="hide-menu">Pengaturan</span>
                             </a>
                             <ul id="pengaturanMenu" class="collapse first-level">
-                                <li class="sidebar-item">
+                                <li class="sidebar-item mt-3">
                                     <a href="{{ route('user.index') }}" class="sidebar-link">
                                         <i class="mdi mdi-account-cog-outline"></i>
                                         <span class="hide-menu">Pengaturan User</span>
@@ -232,7 +231,7 @@
                         </li>
 
                         <!-- Logout -->
-                        <li class="sidebar-item">
+                        <li class="sidebar-item mt-3">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ route('logout') }}"
                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                 <i class="mdi mdi-logout"></i>

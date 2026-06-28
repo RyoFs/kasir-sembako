@@ -6,7 +6,16 @@ body.kasir-fullscreen {
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
 }
+.logo-text{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
 
+.logo-icon{
+    width: 30px;
+    height: 30px;
+}
 /* === HEADER === */
 .kasir-header {
     position: sticky;

@@ -3,15 +3,12 @@
 @section('content')
 <div class="container py-4">
 
-    {{-- HEADER --}}
     <div class="text-center mb-5">
         <h2 class="fw-bold display-6 text-primary mb-2">Dashboard Kasir Sembako</h2>
         <p class="text-muted">Pilih menu untuk mulai bekerja. Aplikasi ini dirancang agar cepat, efisien, dan mudah digunakan.</p>
         <hr class="mt-4" style="opacity: .15;">
     </div>
 
-    {{-- MENU UTAMA --}}
-    <h5 class="fw-bold mb-3 text-secondary">Menu Utama</h5>
     <div class="row g-3">
         <div class="col-6 col-md-4 col-lg-2">
             <a href="{{ url('/') }}" class="menu-card">
@@ -25,11 +22,7 @@
                 <span>Kasir</span>
             </a>
         </div>
-    </div>
 
-    {{-- PRODUCT MANAGEMENT --}}
-    <h5 class="fw-bold mt-5 mb-3 text-secondary">Product Management</h5>
-    <div class="row g-3">
         <div class="col-6 col-md-4 col-lg-2">
             <a href="{{ route('kategori.index') }}" class="menu-card">
                 <i class="mdi mdi-format-list-bulleted-type icon"></i>
@@ -42,11 +35,6 @@
                 <span>Items</span>
             </a>
         </div>
-    </div>
-
-    {{-- TRANSAKSI --}}
-    <h5 class="fw-bold mt-5 mb-3 text-secondary">Transaksi Stok</h5>
-    <div class="row g-3">
         <div class="col-6 col-md-4 col-lg-2">
             <a href="{{ route('stock_logs.index') }}" class="menu-card">
                 <i class="mdi mdi-database-plus icon"></i>
@@ -55,9 +43,7 @@
         </div>
     </div>
 
-    {{-- SETTLEMENT --}}
-    <h5 class="fw-bold mt-5 mb-3 text-secondary">Settlement</h5>
-    <div class="row g-3">
+    <div class="row g-3 mt-3">
         <div class="col-6 col-md-4 col-lg-2">
             <a href="{{ route('settlement.menu') }}" class="menu-card">
                 <i class="mdi mdi-book-multiple-outline icon"></i>
@@ -66,15 +52,10 @@
         </div>
         <div class="col-6 col-md-4 col-lg-2">
             <a href="{{ route('settlement.history') }}" class="menu-card">
-                <i class="mdi mdi-chart-bar-outline icon"></i>
+                <i class="mdi mdi-history icon"></i>
                 <span>Settlement History</span>
             </a>
         </div>
-    </div>
-
-    {{-- LAPORAN --}}
-    <h5 class="fw-bold mt-5 mb-3 text-secondary">Laporan</h5>
-    <div class="row g-3">
         <div class="col-6 col-md-4 col-lg-2">
             <a href="{{ route('laporan.index') }}" class="menu-card">
                 <i class="mdi mdi-file-document-outline icon"></i>
@@ -87,11 +68,6 @@
                 <span>Summary Penjualan</span>
             </a>
         </div>
-    </div>
-
-    {{-- PENGATURAN --}}
-    <h5 class="fw-bold mt-5 mb-3 text-secondary">Pengaturan</h5>
-    <div class="row g-3">
         <div class="col-6 col-md-4 col-lg-2">
             <a href="{{ route('user.index') }}" class="menu-card">
                 <i class="mdi mdi-account-cog-outline icon"></i>
@@ -100,9 +76,7 @@
         </div>
     </div>
 
-    {{-- AKUN --}}
-    <h5 class="fw-bold mt-5 mb-3 text-secondary">Akun</h5>
-    <div class="row g-3">
+    <div class="row g-3 mt-3">
         <div class="col-6 col-md-4 col-lg-2">
             <a href="{{ route('logout') }}"
                onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
