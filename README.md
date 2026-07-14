@@ -339,3 +339,9 @@ This project is intended for educational and portfolio purposes only.
 **Ryo Fahrezi Sempurna**
 
 Laravel Developer • Desktop Application Developer
+
+![Laravel](https://img.shields.io/badge/Laravel-10-red)
+![PHP](https://img.shields.io/badge/PHP-8.3-blue)
+![MySQL](https://img.shields.io/badge/MySQL-Database-orange)
+![Electron](https://img.shields.io/badge/Desktop-Electron-green)
+![License](https://img.shields.io/badge/License-MIT-blue)
