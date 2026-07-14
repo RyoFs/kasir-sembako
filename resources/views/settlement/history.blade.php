@@ -1,5 +1,10 @@
 @extends('layouts.app')
 
+@section('breadcrumb')
+<li class="breadcrumb-item">Settlement</li>
+<li class="breadcrumb-item active">History</li>
+@endsection
+
 @section('content')
 <div class="container-fluid">
     <h4 class="mb-3">History Settlement</h4>

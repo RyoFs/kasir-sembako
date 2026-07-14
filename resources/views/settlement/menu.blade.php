@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('breadcrumb')
-<li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+<li class="breadcrumb-item">Settlement</li>
 <li class="breadcrumb-item active">Settlement Shift</li>
 @endsection
 

@@ -48,7 +48,7 @@
 
         <!-- Harga & Catatan -->
         <div class="mb-3">
-            <label>Harga Beli (Opsional)</label>
+            <label>Harga Beli (per satuan)</label>
             <input type="number" step="0.01" name="harga_beli" class="form-control">
         </div>
         <div class="mb-3">

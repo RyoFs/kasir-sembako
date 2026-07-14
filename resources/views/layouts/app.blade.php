@@ -120,7 +120,7 @@
                         <li class="sidebar-item mt-3">
                             <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{ url('/') }}">
                                 <i class="mdi mdi-home-outline"></i>
-                                <span class="hide-menu">Home</span>
+                                <span class="hide-menu">Dashboard</span>
                             </a>
                         </li>
 
@@ -202,7 +202,7 @@
                                 <li class="sidebar-item">
                                     <a href="{{ route('laporan.index') }}" class="sidebar-link">
                                         <i class="mdi mdi-file-document-outline"></i>
-                                        <span class="hide-menu">Logs Penjualan</span>
+                                        <span class="hide-menu">Transaksi Penjualan</span>
                                     </a>
                                 </li>
                                 <li class="sidebar-item mt-3">

@@ -86,9 +86,7 @@ class StockLogController extends Controller
     // Form edit
     public function edit($id)
     {
-        $log = StockLog::findOrFail($id);
-        $produk = Produk::with('satuan')->orderBy('nama_produk')->get();
-        return view('stock_logs.edit', compact('log','produk'));
+        //dihapus karena tidak dipakai
     }
 
     // Update stock log

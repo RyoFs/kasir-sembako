@@ -111,45 +111,28 @@ public function summary(Request $request)
 
 
     /* ====================================
-   2. HITUNG AVERAGE COST + INITIAL COST
-        =====================================*/
-        $produkSatuan = \App\Models\ProdukSatuan::select('id', 'produk_id', 'stok', 'harga_beli')->get();
+    2. HITUNG AVERAGE COST
+    ==================================== */
 
-        // Step 1: Ambil log stok masuk
-        $log = StockLog::where('type', 'in')
-            ->selectRaw('produk_id, SUM(qty_dasar * harga_beli) AS total_harga_beli, SUM(qty_dasar) AS total_qty_dasar')
-            ->groupBy('produk_id')
-            ->get()
-            ->mapWithKeys(function ($row) {
-                return [
-                    $row->produk_id => [
-                        'total_harga_beli' => $row->total_harga_beli,
-                        'total_qty_dasar' => $row->total_qty_dasar
-                    ]
-                ];
-            });
+    // Ambil seluruh stok masuk dan hitung total nilai pembelian serta total qty dasar
+    $log = StockLog::where('type', 'in')
+        ->selectRaw('
+            produk_id,
+            SUM(qty * harga_beli) AS total_harga_beli,
+            SUM(qty_dasar) AS total_qty_dasar
+        ')
+        ->groupBy('produk_id')
+        ->get();
 
-        $avgCost = [];
+    // Hitung Average Cost per produk
+    $avgCost = [];
 
-        foreach ($produkSatuan as $ps) {
+    foreach ($log as $item) {
 
-            $initialQty = $ps->stok ?? 0;
-            $initialHarga = $ps->harga_beli ?? 0;
-
-            $initialValue = $initialQty * $initialHarga;
-
-            // Ambil data pembelian dari stock_logs
-            $logQty = $log[$ps->produk_id]['total_qty_dasar'] ?? 0;
-            $logValue = $log[$ps->produk_id]['total_harga_beli'] ?? 0;
-
-            $totalQty = $initialQty + $logQty;
-            $totalValue = $initialValue + $logValue;
-
-            // Hitung average cost
-            $avgCost[$ps->produk_id] = ($totalQty > 0)
-                ? $totalValue / $totalQty
-                : 0;
-        }
+        $avgCost[$item->produk_id] = ($item->total_qty_dasar > 0)
+            ? ($item->total_harga_beli / $item->total_qty_dasar)
+            : 0;
+    }
 
 
 
@@ -196,7 +179,8 @@ public function summary(Request $request)
         }
     }
 
-
+    $totalQtyTerjual = collect($profitPerProduk)->sum('qty');
+    
     /* ===============================
        4. RETURN KE VIEW
     ================================*/
@@ -205,6 +189,7 @@ public function summary(Request $request)
         'profitPerProduk',
         'totalPenjualanAll',
         'totalProfitAll',
+        'totalQtyTerjual',
         'startDate',
         'endDate'
     ));
