@@ -151,7 +151,7 @@ The application provides an integrated solution for product management, cashier 
 
 ## Product Management
 
-![Products](images/products.png)
+![Products](images/productss.png)
 
 ## Cashier
 
@@ -163,7 +163,7 @@ The application provides an integrated solution for product management, cashier 
 
 ## Settlements
 
-![Settlements](images/settlements.png)
+![Settlements](images/settlementss.png)
 
 ---
 
